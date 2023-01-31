@@ -1,0 +1,19 @@
+<div class="row row-cols-3 my-4 g-4">
+  <div class="col" v-for="product in sortProduct">
+    <div class="card">
+      <img class="card-img-top" :src="product.imageUrl" />
+      <div class="card-body">
+        <h6 class="card-title">
+          {{ product.title }}
+          <span class="float-end">$ {{ product.price }}</span>
+        </h6>
+        <a
+          href="#"
+          class="btn w-100 btn-outline-primary"
+          @click.prevent="addToCart(product.id)"
+          >加入購物車</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
